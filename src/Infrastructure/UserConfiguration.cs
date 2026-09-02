@@ -21,7 +21,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .HasMaxLength(17)
             .IsRequired();
 
-        // PersonalData как Value Object (struct) -> ComplexProperty, а не OwnsOne
+        // PersonalData как Value 
         builder.ComplexProperty(
             x => x.PersonalData,
             personalData =>
