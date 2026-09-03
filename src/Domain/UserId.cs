@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Domain;
 
-public readonly partial record struct UserId
+public readonly record struct UserId
 {
     private const char Symbol = '#';
 

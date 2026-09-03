@@ -2,7 +2,7 @@ using System.Net.Mail;
 
 namespace Domain;
 
-public readonly partial record struct PersonalData
+public readonly record struct PersonalData
 {
     private const int MinNameLength = 2;
     private const int MaxNameLength = 50;
@@ -27,7 +27,7 @@ public readonly partial record struct PersonalData
     {
         ValidateName(firstName,lastName);
         ValidateEmail(email);
-        return new PersonalData(firstName.Trim(),lastName.Trim(),email.Trim());
+        return new PersonalData(firstName.Trim(),lastName.Trim(),email.Trim().ToLowerInvariant());
     }
     
     private static void ValidateName(string firstName, string lastName)
